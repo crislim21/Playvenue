@@ -1,0 +1,201 @@
+
+.category{
+    background-color: var(--white);
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    margin: 0 .6em 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.category a{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.category::after{
+    content: "";
+    background-color: var(--lblue);
+    position: absolute;
+    z-index: -1;
+    left: -150%;
+    right: -25%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-15deg) scale(0, 1);
+    transition: .3s;
+}
+
+.category img{
+    width: 60%;
+    filter: invert(0);
+    transition: .6s;
+}
+
+.category:hover img {
+    filter:  invert(100%);
+    transform: scale(1.2);
+}
+
+.category:hover::after {
+    transform: skewX(-15deg) scale(1, 1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    color: #aaa;
+    font-size: 3rem;
+    transition: .6s;
+}
+
+.carousel-control-prev:visited,
+.carousel-control-next:visited,
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    color: #000;
+}
+
+#badminton .carousel-inner,
+#basket .carousel-inner,
+#volley .carousel-inner,
+#swim .carousel-inner,
+#futsal .carousel-inner,
+#bowling .carousel-inner{
+    display: flex;
+    padding: 1em;
+    background-color: #fffbeb;
+    flex-wrap: nowrap;
+}
+
+#badminton .carousel-item,
+#basket .carousel-item,
+#volley .carousel-item,
+#swim .carousel-item,
+#futsal .carousel-item,
+#bowling .carousel-item{
+    display: block;
+    flex: 0 0 25%;
+    margin: 0 .7em;
+}
+
+.custom-card {
+    -webkit-perspective: 150rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    width: 250px;
+    height: 330px
+}
+
+.card__side {
+    height:330px;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side--front {
+    background: linear-gradient(-45deg, #326789, #76a8cb);
+}
+
+.card__side--back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: linear-gradient(-45deg, #326789, #76a8cb);
+}
+
+
+.custom-card:hover .card__side--front{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.custom-card:hover .card__side--back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+.table th{
+    width: 2rem;
+    color: #fff;
+}
+
+.table td{
+    color: #fff;
+}
+
+.custom-btn, .custom-btn:link, .custom-btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.custom-btn:active, .custom-btn:focus {
+    outline: none;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    opacity: 1 !important;
+}
+
+.carousel button span i{
+    font-size: 3rem; 
+    color: var(--red);
+}
+
+.carousel button span i::before{
+    background-color: var(--white);
+    border-radius: 10px;
+}
